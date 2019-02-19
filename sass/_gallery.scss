@@ -1,0 +1,17 @@
+.gallery{
+    margin: 5% 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img{
+        height: 176px;
+        width: 250px;
+        transition: .3s;
+        padding: 10px;
+        &:hover{
+            filter: grayscale(0%);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+}

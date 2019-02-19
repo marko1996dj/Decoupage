@@ -1,0 +1,33 @@
+.main{
+    background-image: url(../images/jasmin-schreiber-607924-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    text-align: center;
+    color: #ccf6e7;
+    h1{
+        padding-top: 15%;
+        font-size: 200px;
+        font-weight: 400;
+    }
+    p{
+        padding-top: 1%;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .arrow{
+        padding-top: 3%;
+        font-size: 60px;
+        padding-bottom: 13.5%;
+        transition: .5s;
+        i{
+            transition: .5s;
+            &:hover{
+                cursor: pointer;
+                color: #75b29c;
+            }
+        }
+    }
+}
+

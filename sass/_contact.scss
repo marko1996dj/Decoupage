@@ -1,0 +1,44 @@
+.contact{
+    background-color:#ccf6e7;
+    color: #302d2d;
+    text-align: center;
+    padding: 5% 15%;
+    h1{
+        margin-bottom: 3%;
+    }
+    .social-media{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3%;
+        a{
+            text-decoration: none;
+            color: #302d2d;
+        }
+        .facebook{
+            font-size: 30px;
+            margin-right: 1%;
+            transition: .5s;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+                color: black;
+            }
+        }
+        .instagram{
+            margin-left: 1%;
+            font-size: 30px;
+            transition: .5s;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+                color: black;
+            }
+        }
+    }
+    .email-phone{
+        margin: 3%;
+        .email{
+            padding: 2%;
+        }
+    }
+}
