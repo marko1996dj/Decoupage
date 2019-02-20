@@ -46,12 +46,19 @@ body, html {
   padding-bottom: 13.5%;
 }
 
-.main .arrow i {
+.main .arrow button {
+  border: none;
+  background: transparent;
+}
+
+.main .arrow button i {
+  font-size: 30px;
+  color: #ccf6e7;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-.main .arrow i:hover {
+.main .arrow button i:hover {
   color: #75b29c;
   cursor: pointer;
   -webkit-transform: scale(1.1);
@@ -66,7 +73,7 @@ body, html {
   .main p {
     font-size: 40px;
   }
-  .main .arrow i {
+  .main .arrow button i {
     font-size: 60px;
   }
   .main .arrow h4 {
@@ -534,6 +541,10 @@ html.lb-disable-scrolling {
           transform: none;
 }
 
+.gallery h1 {
+  display: none;
+}
+
 .gallery .lightbox-mobile-only {
   display: none;
   height: 100%;
@@ -557,6 +568,7 @@ html.lb-disable-scrolling {
 
 @media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
   .gallery h1 {
+    display: block;
     text-align: center;
     font-size: 50px;
     margin: 3% 0;

@@ -1,4 +1,7 @@
 .gallery{
+    h1{
+        display: none;
+    }
     .lightbox-mobile-only{
         display: none;
         height: 100%;
@@ -20,6 +23,7 @@
 @include breakpoint (mobileonly) {
     .gallery{
         h1{
+            display: block;
             text-align: center;
             font-size: 50px;
             margin: 3% 0;

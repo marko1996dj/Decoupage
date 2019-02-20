@@ -61,7 +61,7 @@ $(document).ready(function() {
 
     $image.css("background-image", $(this).css("background-image"));
     if (help) {
-      $help.html("Klikom na bilo koje polje se vracate nazad");
+      $help.html("Deo mojih radova");
       help = false;
     }
 

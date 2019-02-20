@@ -28,12 +28,18 @@
         padding-top: 3%;
         font-size: 30px;
         padding-bottom: 13.5%;
-        i{
-            transition: .5s;
-            &:hover{
-                color: #75b29c;
-                cursor: pointer;
-                transform: scale(1.1);
+        button{
+            border: none;
+            background: transparent;
+            i{
+                font-size: 30px;
+                color: #ccf6e7;
+                transition: .5s;
+                &:hover{
+                    color: #75b29c;
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
             }
         }
     }
@@ -49,8 +55,10 @@
             font-size: 40px;
         }
         .arrow{
-            i{
-                font-size: 60px;
+            button{
+                i{
+                    font-size: 60px;
+                }
             }
             h4{
                 font-size: 60px;
