@@ -6,11 +6,19 @@
     height: 100%;
     text-align: center;
     color: #ccf6e7;
-    h1{
+    .welcome{
         padding-top: 15%;
         font-size: 170px;
         font-weight: 400;
+       
     }
+    span{
+        transition: .5s;
+        &:hover{
+            color: #75b29c;
+            cursor: pointer;
+        }
+    } 
     p{
         padding-top: 1%;
         font-size: 30px;
@@ -18,14 +26,14 @@
     }
     .arrow{
         padding-top: 3%;
-        font-size: 60px;
+        font-size: 30px;
         padding-bottom: 13.5%;
-        transition: .5s;
         i{
             transition: .5s;
             &:hover{
-                cursor: pointer;
                 color: #75b29c;
+                cursor: pointer;
+                transform: scale(1.1);
             }
         }
     }
@@ -33,9 +41,20 @@
 
 @include breakpoint (mobileonly){
     .main{
-        h1{
-            padding-top: 40%;
+        .welcome{
+            padding-top: 50%;
             font-size: 170px;
+        }
+        p{
+            font-size: 40px;
+        }
+        .arrow{
+            i{
+                font-size: 60px;
+            }
+            h4{
+                font-size: 60px;
+            }
         }
     }
 }

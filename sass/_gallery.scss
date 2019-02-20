@@ -1,17 +1,41 @@
 .gallery{
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    img{
-        height: 176px;
-        width: 250px;
-        transition: .3s;
-        padding: 10px;
-        &:hover{
-            filter: grayscale(0%);
-            cursor: pointer;
-            transform: scale(1.1);
+    .lightbox-mobile-only{
+        display: none;
+        height: 100%;
+        img{
+            height: 176px;
+            width: 250px;
+            transition: .3s;
+            padding: 10px;
+            &:hover{
+                filter: grayscale(0%);
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+@include breakpoint (mobileonly) {
+    .gallery{
+        h1{
+            text-align: center;
+            font-size: 50px;
+            margin: 3% 0;
+            color: #302d2d;
+        }
+        .lightbox-mobile-only{
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            img{
+                width: 450px;
+                height: 322.22px;
+            }
+        }
+        .demo{
+            display: none;
         }
     }
 }

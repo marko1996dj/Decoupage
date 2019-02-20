@@ -18,10 +18,20 @@ body, html {
   color: #ccf6e7;
 }
 
-.main h1 {
+.main .welcome {
   padding-top: 15%;
   font-size: 170px;
   font-weight: 400;
+}
+
+.main span {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main span:hover {
+  color: #75b29c;
+  cursor: pointer;
 }
 
 .main p {
@@ -32,10 +42,8 @@ body, html {
 
 .main .arrow {
   padding-top: 3%;
-  font-size: 60px;
+  font-size: 30px;
   padding-bottom: 13.5%;
-  -webkit-transition: .5s;
-  transition: .5s;
 }
 
 .main .arrow i {
@@ -44,14 +52,25 @@ body, html {
 }
 
 .main .arrow i:hover {
-  cursor: pointer;
   color: #75b29c;
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
-  .main h1 {
-    padding-top: 40%;
+  .main .welcome {
+    padding-top: 50%;
     font-size: 170px;
+  }
+  .main p {
+    font-size: 40px;
+  }
+  .main .arrow i {
+    font-size: 60px;
+  }
+  .main .arrow h4 {
+    font-size: 60px;
   }
 }
 
@@ -263,19 +282,264 @@ html.lb-disable-scrolling {
   opacity: 1;
 }
 
-.gallery {
-  height: 100%;
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.demo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
 }
 
-.gallery img {
+.demo__gallery {
+  width: 1200px;
+  padding: 0px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: #eee;
+  -webkit-perspective: 700px;
+          perspective: 700px;
+  border-radius: 5px;
+}
+
+.demo__part {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 0px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.demo__part:hover .demo__part-front {
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+.demo__part:hover .demo__part-front:after {
+  opacity: 0;
+}
+
+.demo__part-front, .demo__part-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  cursor: pointer;
+}
+
+.demo__part-front {
+  background-color: lightslategrey;
+  background-size: cover;
+  background-position: center;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  -webkit-transition: all 0.33333s ease;
+  transition: all 0.33333s ease;
+}
+
+.demo__part-front:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  content: "";
+  opacity: 0.5;
+  -webkit-transition: all 0.33333s ease;
+  transition: all 0.33333s ease;
+}
+
+.demo__part-back {
+  -webkit-transform: rotateY(180deg) rotateX(0deg);
+          transform: rotateY(180deg) rotateX(0deg);
+}
+
+.demo__part-back-inner {
+  width: 1200px;
+  height: 800px;
+  background-image: url(http://kirillkiyutin.com/img/nyc/nyc1.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.demo__help {
+  margin-bottom: 37px;
+  font-size: 30px;
+  color: #302d2d;
+  font-weight: bold;
+}
+
+.demo__help a {
+  color: #302d2d;
+}
+
+.demo__help a:hover {
+  color: #302d2d;
+}
+
+.demo__part-1-1 .demo__part-back-inner {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.demo__part-1-2 .demo__part-back-inner {
+  -webkit-transform: translate(-200px, 0px);
+          transform: translate(-200px, 0px);
+}
+
+.demo__part-1-3 .demo__part-back-inner {
+  -webkit-transform: translate(-400px, 0px);
+          transform: translate(-400px, 0px);
+}
+
+.demo__part-1-4 .demo__part-back-inner {
+  -webkit-transform: translate(-600px, 0px);
+          transform: translate(-600px, 0px);
+}
+
+.demo__part-1-5 .demo__part-back-inner {
+  -webkit-transform: translate(-800px, 0px);
+          transform: translate(-800px, 0px);
+}
+
+.demo__part-1-6 .demo__part-back-inner {
+  -webkit-transform: translate(-1000px, 0px);
+          transform: translate(-1000px, 0px);
+}
+
+.demo__part-2-1 .demo__part-back-inner {
+  -webkit-transform: translate(0px, -200px);
+          transform: translate(0px, -200px);
+}
+
+.demo__part-2-2 .demo__part-back-inner {
+  -webkit-transform: translate(-200px, -200px);
+          transform: translate(-200px, -200px);
+}
+
+.demo__part-2-3 .demo__part-back-inner {
+  -webkit-transform: translate(-400px, -200px);
+          transform: translate(-400px, -200px);
+}
+
+.demo__part-2-4 .demo__part-back-inner {
+  -webkit-transform: translate(-600px, -200px);
+          transform: translate(-600px, -200px);
+}
+
+.demo__part-2-5 .demo__part-back-inner {
+  -webkit-transform: translate(-800px, -200px);
+          transform: translate(-800px, -200px);
+}
+
+.demo__part-2-6 .demo__part-back-inner {
+  -webkit-transform: translate(-1000px, -200px);
+          transform: translate(-1000px, -200px);
+}
+
+.demo__part-3-1 .demo__part-back-inner {
+  -webkit-transform: translate(0px, -400px);
+          transform: translate(0px, -400px);
+}
+
+.demo__part-3-2 .demo__part-back-inner {
+  -webkit-transform: translate(-200px, -400px);
+          transform: translate(-200px, -400px);
+}
+
+.demo__part-3-3 .demo__part-back-inner {
+  -webkit-transform: translate(-400px, -400px);
+          transform: translate(-400px, -400px);
+}
+
+.demo__part-3-4 .demo__part-back-inner {
+  -webkit-transform: translate(-600px, -400px);
+          transform: translate(-600px, -400px);
+}
+
+.demo__part-3-5 .demo__part-back-inner {
+  -webkit-transform: translate(-800px, -400px);
+          transform: translate(-800px, -400px);
+}
+
+.demo__part-3-6 .demo__part-back-inner {
+  -webkit-transform: translate(-1000px, -400px);
+          transform: translate(-1000px, -400px);
+}
+
+.demo__part-4-1 .demo__part-back-inner {
+  -webkit-transform: translate(0px, -600px);
+          transform: translate(0px, -600px);
+}
+
+.demo__part-4-2 .demo__part-back-inner {
+  -webkit-transform: translate(-200px, -600px);
+          transform: translate(-200px, -600px);
+}
+
+.demo__part-4-3 .demo__part-back-inner {
+  -webkit-transform: translate(-400px, -600px);
+          transform: translate(-400px, -600px);
+}
+
+.demo__part-4-4 .demo__part-back-inner {
+  -webkit-transform: translate(-600px, -600px);
+          transform: translate(-600px, -600px);
+}
+
+.demo__part-4-5 .demo__part-back-inner {
+  -webkit-transform: translate(-800px, -600px);
+          transform: translate(-800px, -600px);
+}
+
+.demo__part-4-6 .demo__part-back-inner {
+  -webkit-transform: translate(-1000px, -600px);
+          transform: translate(-1000px, -600px);
+}
+
+.show-front {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.gallery .lightbox-mobile-only {
+  display: none;
+  height: 100%;
+}
+
+.gallery .lightbox-mobile-only img {
   height: 176px;
   width: 250px;
   -webkit-transition: .3s;
@@ -283,12 +547,38 @@ html.lb-disable-scrolling {
   padding: 10px;
 }
 
-.gallery img:hover {
+.gallery .lightbox-mobile-only img:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   cursor: pointer;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+@media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
+  .gallery h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 3% 0;
+    color: #302d2d;
+  }
+  .gallery .lightbox-mobile-only {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .gallery .lightbox-mobile-only img {
+    width: 450px;
+    height: 322.22px;
+  }
+  .gallery .demo {
+    display: none;
+  }
 }
 
 .contact {
