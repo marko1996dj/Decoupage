@@ -1,8 +1,8 @@
 function topFunction() {
-    $("button").click(function() {
+    $("button").click(function () {
         $('html,body').animate({
-            scrollTop: $(".gallery").offset().top},
+                scrollTop: $(".gallery").offset().top
+            },
             'slow');
     });
-  }
-  
+}

@@ -3,92 +3,10 @@
   margin: 0;
 }
 
-body, html {
+body,
+html {
   font-family: 'Quicksand', sans-serif;
   height: 100%;
-}
-
-.main {
-  background-image: url(../images/jasmin-schreiber-607924-unsplash.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  height: 100%;
-  text-align: center;
-  color: #ccf6e7;
-}
-
-.main .welcome {
-  padding-top: 15%;
-  font-size: 170px;
-  font-weight: 400;
-}
-
-.main span {
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.main span:hover {
-  color: #75b29c;
-  cursor: pointer;
-}
-
-.main p {
-  padding-top: 1%;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.main .arrow {
-  padding-top: 3%;
-  font-size: 30px;
-  padding-bottom: 13.5%;
-}
-
-.main .arrow button {
-  border: none;
-  background: transparent;
-}
-
-.main .arrow button i {
-  font-size: 30px;
-  color: #ccf6e7;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.main .arrow button i:hover {
-  color: #75b29c;
-  cursor: pointer;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-@media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
-  .main {
-    background-size: cover;
-  }
-  .main .welcome {
-    padding-top: 50%;
-    font-size: 170px;
-  }
-  .main p {
-    font-size: 40px;
-  }
-  .main .arrow button i {
-    font-size: 60px;
-  }
-  .main .arrow h4 {
-    font-size: 60px;
-  }
-}
-
-@media (max-width: 37.5em) {
-  .main h1 {
-    font-size: 100px;
-    padding-top: 40%;
-  }
 }
 
 .lb-loader,
@@ -292,7 +210,9 @@ html.lb-disable-scrolling {
   opacity: 1;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -544,7 +464,90 @@ html.lb-disable-scrolling {
           transform: none;
 }
 
-.gallery h1 {
+.main {
+  background-image: url(../images/background/jasmin-schreiber-607924-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100%;
+  text-align: center;
+  color: #ccf6e7;
+}
+
+.main .home .welcome {
+  padding-top: 15%;
+  font-size: 170px;
+  font-weight: 400;
+}
+
+.main .home .welcome span {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main .home .welcome span:hover {
+  color: #75b29c;
+  cursor: pointer;
+}
+
+.main .home .intro-text {
+  padding-top: 1%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.main .home .arrow {
+  padding-top: 3%;
+  font-size: 30px;
+  padding-bottom: 13.5%;
+}
+
+.main .home .arrow button {
+  border: none;
+  background: transparent;
+}
+
+.main .home .arrow button i {
+  font-size: 30px;
+  color: #ccf6e7;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main .home .arrow button i:hover {
+  color: #75b29c;
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
+  .main {
+    background-size: cover;
+  }
+  .main .home .welcome {
+    padding-top: 70% !important;
+    font-size: 170px;
+  }
+  .main .home .intro-text {
+    font-size: 40px;
+  }
+  .main .home .arrow button i {
+    font-size: 60px;
+  }
+  .main .home .arrow h4 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .main h1 {
+    font-size: 100px;
+    padding-top: 40%;
+  }
+}
+
+.gallery .my-work h1 {
   display: none;
 }
 
@@ -570,7 +573,7 @@ html.lb-disable-scrolling {
 }
 
 @media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
-  .gallery h1 {
+  .gallery .my-work h1 {
     display: block;
     text-align: center;
     font-size: 50px;
@@ -603,7 +606,7 @@ html.lb-disable-scrolling {
   padding: 5% 15%;
 }
 
-.contact h1 {
+.contact .about-me h1 {
   margin-bottom: 3%;
 }
 
@@ -617,7 +620,8 @@ html.lb-disable-scrolling {
   margin-bottom: 3%;
 }
 
-.contact .social-media a {
+.contact .social-media .facebook,
+.contact .social-media .instagram {
   text-decoration: none;
   color: #302d2d;
 }
@@ -662,17 +666,21 @@ html.lb-disable-scrolling {
   .contact {
     padding: 5%;
   }
-  .contact h1 {
+  .contact .about-me h1 {
     font-size: 60px;
   }
-  .contact p {
+  .contact .contact-message p {
     font-size: 1.6em;
   }
-  .contact .email-phone, .contact .social-media {
+  .contact .email-phone,
+  .contact .social-media {
     font-size: 1.6em;
   }
-  .contact .email-phone i, .contact .social-media i {
-    font-size: 2em;
+  .contact .email-phone .facebook,
+  .contact .email-phone .instagram,
+  .contact .social-media .facebook,
+  .contact .social-media .instagram {
+    font-size: 1.8em;
     margin: 15px;
   }
 }

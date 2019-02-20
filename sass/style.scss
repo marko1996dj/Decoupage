@@ -1,7 +1,10 @@
-@import 'general';
 @import 'mixin';
-@import 'home';
-@import 'lightbox.min';
-@import 'puzzlegallery.scss';
-@import 'gallery';
-@import 'contact';
+
+@import 'general';
+
+@import 'plugins/lightbox.min';
+@import 'plugins/puzzlegallery';
+
+@import 'sections/home';
+@import 'sections/gallery';
+@import 'sections/contact';

@@ -1,0 +1,85 @@
+.contact {
+    background-color: #ccf6e7;
+    color: #302d2d;
+    text-align: center;
+    padding: 5% 15%;
+
+    .about-me {
+        h1 {
+            margin-bottom: 3%;
+        }
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3%;
+
+        .facebook,
+        .instagram {
+            text-decoration: none;
+            color: #302d2d;
+        }
+
+        .facebook {
+            font-size: 30px;
+            margin-right: 1%;
+            transition: .5s;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+                color: black;
+            }
+        }
+
+        .instagram {
+            margin-left: 1%;
+            font-size: 30px;
+            transition: .5s;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+                color: black;
+            }
+        }
+    }
+
+    .email-phone {
+        margin: 3%;
+
+        .email {
+            padding: 2%;
+        }
+    }
+}
+
+@include breakpoint (mobileonly) {
+    .contact {
+        padding: 5%;
+
+        .about-me {
+            h1 {
+                font-size: 60px;
+            }
+        }
+
+        .contact-message {
+            p {
+                font-size: 1.6em;
+            }
+        }
+
+        .email-phone,
+        .social-media {
+            font-size: 1.6em;
+
+            .facebook,
+            .instagram {
+                font-size: 1.8em;
+                margin: 15px;
+            }
+        }
+    }
+}

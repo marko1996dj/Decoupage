@@ -1,5 +1,5 @@
 "use strict";
-$(document).ready(function() {
+$(document).ready(function () {
 
   var rows = 4; //change this also in css
   var cols = 6; //change this also in css
@@ -35,8 +35,8 @@ $(document).ready(function() {
   var $gallery = $(".demo__gallery");
   var $help = $(".demo__help");
   var partsArray = [];
-  var reqAnimFr = (function() {
-    return window.requestAnimationFrame || function(cb) {
+  var reqAnimFr = (function () {
+    return window.requestAnimationFrame || function (cb) {
       setTimeout(cb, 1000 / 60);
     }
   })();
@@ -57,7 +57,7 @@ $(document).ready(function() {
     $parts.find(".demo__part-front").eq(i).css("background-image", `url(${urls[i]})`);
   }
 
-  $gallery.on("click", ".demo__part-front", function() {
+  $gallery.on("click", ".demo__part-front", function () {
 
     $image.css("background-image", $(this).css("background-image"));
     if (help) {
@@ -70,28 +70,28 @@ $(document).ready(function() {
     waveChange(row, col);
   });
 
-  $gallery.on("click", ".demo__part-back", function() {
+  $gallery.on("click", ".demo__part-back", function () {
     if (!isShowingBack()) return;
 
 
-    setTimeout(function() {
+    setTimeout(function () {
       for (let row = 1; row <= rows; row++) {
         for (let col = 1; col <= cols; col++) {
           partsArray[row - 1][col - 1].showing = "front";
         }
       }
     }, staggerTime + $parts.length * staggerTime / 10);
-    
-    
+
+
     showFront(0, $parts.length);
-    
+
   });
-  
+
   function showFront(i, maxI) {
     if (i >= maxI) return;
     $parts.eq(i).addClass("show-front");
-    
-    reqAnimFr(function() {
+
+    reqAnimFr(function () {
       showFront(i + 1);
     });
   }
@@ -109,7 +109,7 @@ $(document).ready(function() {
     if (partsArray[rowN - 1][colN - 1].showing == "back") return;
     $(".demo__part-" + rowN + "-" + colN).removeClass("show-front");
     partsArray[rowN - 1][colN - 1].showing = "back";
-    setTimeout(function() {
+    setTimeout(function () {
       waveChange(rowN + 1, colN);
       waveChange(rowN - 1, colN);
       waveChange(rowN, colN + 1);
