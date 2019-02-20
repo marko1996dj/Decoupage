@@ -47,6 +47,7 @@
 
 @include breakpoint (mobileonly){
     .main{
+        background-size: cover;
         .welcome{
             padding-top: 50%;
             font-size: 170px;

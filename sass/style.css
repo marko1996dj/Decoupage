@@ -66,6 +66,9 @@ body, html {
 }
 
 @media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
+  .main {
+    background-size: cover;
+  }
   .main .welcome {
     padding-top: 50%;
     font-size: 170px;
@@ -653,5 +656,24 @@ html.lb-disable-scrolling {
 
 .contact .email-phone .email {
   padding: 2%;
+}
+
+@media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
+  .contact {
+    padding: 5%;
+  }
+  .contact h1 {
+    font-size: 60px;
+  }
+  .contact p {
+    font-size: 1.6em;
+  }
+  .contact .email-phone, .contact .social-media {
+    font-size: 1.6em;
+  }
+  .contact .email-phone i, .contact .social-media i {
+    font-size: 2em;
+    margin: 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
