@@ -20,7 +20,7 @@ body, html {
 
 .main h1 {
   padding-top: 15%;
-  font-size: 200px;
+  font-size: 170px;
   font-weight: 400;
 }
 
@@ -46,6 +46,20 @@ body, html {
 .main .arrow i:hover {
   cursor: pointer;
   color: #75b29c;
+}
+
+@media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
+  .main h1 {
+    padding-top: 40%;
+    font-size: 170px;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .main h1 {
+    font-size: 100px;
+    padding-top: 40%;
+  }
 }
 
 .lb-loader,
@@ -250,7 +264,7 @@ html.lb-disable-scrolling {
 }
 
 .gallery {
-  margin: 5% 10%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
