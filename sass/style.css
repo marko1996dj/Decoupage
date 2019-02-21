@@ -29,6 +29,7 @@ html.lb-disable-scrolling {
 }
 
 .lightboxOverlay {
+  padding-top: 40%;
   position: absolute;
   top: 0;
   left: 0;
@@ -522,12 +523,12 @@ html.lb-disable-scrolling {
           transform: scale(1.1);
 }
 
-@media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
+@media (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
   .main {
     background-size: cover;
   }
   .main .home .welcome {
-    padding-top: 70% !important;
+    padding-top: 50% !important;
     font-size: 170px;
   }
   .main .home .intro-text {
@@ -541,10 +542,22 @@ html.lb-disable-scrolling {
   }
 }
 
-@media (max-width: 37.5em) {
-  .main h1 {
-    font-size: 100px;
-    padding-top: 40%;
+@media (max-width: 1250px) {
+  .main .welcome {
+    padding-top: 20% !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .main .welcome {
+    padding-top: 25% !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .main .welcome {
+    font-size: 140px !important;
+    padding-top: 30% !important;
   }
 }
 
@@ -573,7 +586,34 @@ html.lb-disable-scrolling {
           transform: scale(1.1);
 }
 
-@media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
+@media (max-width: 900px) {
+  .gallery .my-work h1 {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    margin: 3% 0;
+    color: #302d2d;
+  }
+  .gallery .lightbox-mobile-only {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .gallery .lightbox-mobile-only img {
+    width: 450px;
+    height: 322.22px;
+  }
+  .gallery .demo {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
   .gallery .my-work h1 {
     display: block;
     text-align: center;
@@ -603,12 +643,35 @@ html.lb-disable-scrolling {
 .contact {
   background-color: #ccf6e7;
   color: #302d2d;
-  text-align: center;
-  padding: 5% 15%;
+  padding: 5% 0;
 }
 
 .contact .about-me h1 {
   margin-bottom: 3%;
+  margin-left: 32%;
+}
+
+.contact .about-me .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact .about-me .wrapper .wrap-left {
+  margin: 5% 0 0% 15%;
+  max-width: 40%;
+  text-align: center;
+}
+
+.contact .about-me .wrapper .wrap-right {
+  margin: 0% 15% 0% 0;
+}
+
+.contact .about-me .wrapper .wrap-right .fb-page {
+  width: 400px !important;
 }
 
 .contact .social-media {
@@ -663,12 +726,21 @@ html.lb-disable-scrolling {
   padding: 2%;
 }
 
-@media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
+@media (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
   .contact {
     padding: 5%;
   }
   .contact .about-me h1 {
     font-size: 60px;
+  }
+  .contact .about-me .wrapper {
+    display: block;
+  }
+  .contact .about-me .wrapper .wrap-left {
+    min-width: 700px;
+  }
+  .contact .about-me .wrapper .wrap-right {
+    display: none;
   }
   .contact .contact-message p {
     font-size: 1.6em;
@@ -683,6 +755,45 @@ html.lb-disable-scrolling {
   .contact .social-media .instagram {
     font-size: 1.8em;
     margin: 15px;
+  }
+}
+
+@media (max-width: 1550px) {
+  .contact .about-me .wrapper .wrap-left {
+    margin-left: 8%;
+  }
+  .contact .about-me .wrapper .wrap-right {
+    margin-right: 8%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .contact .about-me .wrapper .wrap-right {
+    margin-top: 4%;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact .about-me {
+    text-align: center;
+  }
+  .contact .about-me .wrapper {
+    display: block;
+  }
+  .contact .about-me .wrapper .wrap-left {
+    margin: 0 auto;
+    min-width: 70%;
+    margin-bottom: 5%;
+  }
+  .contact .about-me .wrapper .wrap-right {
+    margin-left: 29%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .contact .about-me h1 {
+    margin: 0 !important;
+    text-align: center !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

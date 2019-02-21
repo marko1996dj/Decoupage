@@ -1,12 +1,27 @@
 .contact {
     background-color: #ccf6e7;
     color: #302d2d;
-    text-align: center;
-    padding: 5% 15%;
+    padding: 5% 0;
 
     .about-me {
         h1 {
             margin-bottom: 3%;
+            margin-left: 32%;
+        }
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            .wrap-left{
+                margin: 5% 0 0% 15%;
+                max-width: 40%;
+                text-align: center;
+            }
+            .wrap-right{
+                margin: 0% 15% 0% 0;
+                .fb-page{
+                    width: 400px !important;
+                }
+            }
         }
     }
 
@@ -63,6 +78,15 @@
             h1 {
                 font-size: 60px;
             }
+            .wrapper{
+                display: block;
+                .wrap-left{
+                    min-width: 700px;
+                }
+                .wrap-right{
+                    display: none;
+                }
+            }
         }
 
         .contact-message {
@@ -79,6 +103,64 @@
             .instagram {
                 font-size: 1.8em;
                 margin: 15px;
+            }
+        }
+    }
+}
+
+@include breakpoint (desktop) {
+    .contact{
+        .about-me{
+            .wrapper{
+                .wrap-left{
+                    margin-left: 8%;
+                }
+                .wrap-right{
+                    margin-right: 8%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint (laptop) {
+    .contact{
+        .about-me{
+            .wrapper{
+                .wrap-right{
+                    margin-top: 4%;
+                }
+            }
+        }
+    }
+}
+
+
+@include breakpoint (phablet) {
+    .contact{
+        .about-me{
+            text-align: center;
+            .wrapper{
+                display: block;
+                .wrap-left{
+                    margin: 0 auto;
+                    min-width: 70%;
+                    margin-bottom: 5%;
+                }
+                .wrap-right{
+                    margin-left: 29%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint (tablet) {
+    .contact{
+        .about-me{
+            h1{
+                margin: 0 !important;
+                text-align: center !important;
             }
         }
     }

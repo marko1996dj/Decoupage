@@ -18,13 +18,13 @@
    }
 
    @else if $point==phablet {
-      @media (max-width: 37.5em) {
+      @media (max-width: 900px) {
          @content ;
       }
    }
 
    @else if $point==mobileonly {
-      @media (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
+      @media (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
          @content ;
       }
    }

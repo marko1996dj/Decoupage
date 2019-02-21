@@ -25,6 +25,35 @@
 }
 
 
+@include breakpoint (phablet) {
+    .gallery {
+        .my-work {
+            h1 {
+                display: block;
+                text-align: center;
+                font-size: 50px;
+                margin: 3% 0;
+                color: #302d2d;
+            }
+        }
+
+        .lightbox-mobile-only {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+
+            img {
+                width: 450px;
+                height: 322.22px;
+            }
+        }
+
+        .demo {
+            display: none;
+        }
+    }
+}
+
 @include breakpoint (mobileonly) {
     .gallery {
         .my-work {

@@ -52,10 +52,6 @@
             }
         }
     }
-
-
-
-
 }
 
 @include breakpoint (mobileonly) {
@@ -64,7 +60,7 @@
 
         .home {
             .welcome {
-                padding-top: 70% !important;
+                padding-top: 50% !important;
                 font-size: 170px;
             }
 
@@ -87,11 +83,27 @@
     }
 }
 
+@include breakpoint (laptop) {
+    .main {
+        .welcome {
+            padding-top: 20% !important;
+        }
+    }
+}
+
+@include breakpoint (tablet) {
+    .main {
+        .welcome {
+            padding-top: 25% !important;
+        }
+    }
+}
+
 @include breakpoint (phablet) {
     .main {
-        h1 {
-            font-size: 100px;
-            padding-top: 40%;
+        .welcome {
+            font-size: 140px !important;
+            padding-top: 30% !important;
         }
     }
 }
