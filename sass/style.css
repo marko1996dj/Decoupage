@@ -465,7 +465,8 @@ html.lb-disable-scrolling {
 }
 
 .main {
-  background-image: url(../images/background/jasmin-schreiber-607924-unsplash.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.9))), url(../images/background/background.webp);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url(../images/background/background.webp);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
