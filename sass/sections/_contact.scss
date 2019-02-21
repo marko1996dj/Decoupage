@@ -73,15 +73,15 @@
 @include breakpoint (mobileonly) {
     .contact {
         padding: 5%;
-
         .about-me {
             h1 {
-                font-size: 60px;
+                font-size: 100px;
             }
             .wrapper{
                 display: block;
                 .wrap-left{
                     min-width: 700px;
+                    font-size: 40px;
                 }
                 .wrap-right{
                     display: none;

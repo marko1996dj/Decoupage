@@ -731,13 +731,14 @@ html.lb-disable-scrolling {
     padding: 5%;
   }
   .contact .about-me h1 {
-    font-size: 60px;
+    font-size: 100px;
   }
   .contact .about-me .wrapper {
     display: block;
   }
   .contact .about-me .wrapper .wrap-left {
     min-width: 700px;
+    font-size: 40px;
   }
   .contact .about-me .wrapper .wrap-right {
     display: none;
