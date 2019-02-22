@@ -221,10 +221,13 @@ html.lb-disable-scrolling {
 }
 
 .demo {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100vw;
+  max-width: 1220px;
   height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -236,7 +239,7 @@ html.lb-disable-scrolling {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white;
+  background: #dedede;
 }
 
 .demo__gallery {
@@ -244,7 +247,7 @@ html.lb-disable-scrolling {
   padding: 0px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  background: #eee;
+  background: #dedede;
   -webkit-perspective: 700px;
           perspective: 700px;
   border-radius: 5px;
@@ -328,7 +331,7 @@ html.lb-disable-scrolling {
 .demo__help {
   margin-bottom: 37px;
   font-size: 30px;
-  color: #302d2d;
+  color: #75b29c;
   font-weight: bold;
 }
 
@@ -465,15 +468,18 @@ html.lb-disable-scrolling {
           transform: none;
 }
 
-.main {
+body {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.9))), url(../images/background/background.webp);
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url(../images/background/background.webp);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+}
+
+.main {
   height: 100%;
   text-align: center;
-  color: #ccf6e7;
+  color: #dedede;
 }
 
 .main .home .welcome {
@@ -641,160 +647,88 @@ html.lb-disable-scrolling {
 }
 
 .contact {
-  background-color: #ccf6e7;
+  margin: 0 auto;
+  max-width: 1220px;
+  text-align: center;
+  background-color: #dedede;
   color: #302d2d;
-  padding: 5% 0;
+  padding: 0 5%;
 }
 
 .contact .about-me h1 {
-  margin-bottom: 3%;
-  margin-left: 32%;
+  color: #75b29c;
+  padding-bottom: 4%;
 }
 
-.contact .about-me .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.contact .about-me .wrapper .wrap-left {
-  margin: 5% 0 0% 15%;
-  max-width: 40%;
-  text-align: center;
-}
-
-.contact .about-me .wrapper .wrap-right {
-  margin: 0% 15% 0% 0;
-}
-
-.contact .about-me .wrapper .wrap-right .fb-page {
-  width: 400px !important;
-}
-
-.contact .social-media {
+.contact .about-me .social-media ul {
+  padding: 2% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 3%;
 }
 
-.contact .social-media .facebook,
-.contact .social-media .instagram {
+.contact .about-me .social-media ul li {
+  list-style: none;
+}
+
+.contact .about-me .social-media ul li a {
+  width: 60px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 50%;
+  padding: 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-decoration: none;
-  color: #302d2d;
-}
-
-.contact .social-media .facebook {
-  font-size: 30px;
-  margin-right: 1%;
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ddd), to(#fff));
+  background: linear-gradient(0deg, #ddd, #fff);
   -webkit-transition: .5s;
   transition: .5s;
-  cursor: pointer;
 }
 
-.contact .social-media .facebook:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  color: black;
+.contact .about-me .social-media ul li a:hover {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.contact .social-media .instagram {
-  margin-left: 1%;
-  font-size: 30px;
+.contact .about-me .social-media ul li a .fab {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#ddd));
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size: 24px;
+  color: #262626;
   -webkit-transition: .5s;
   transition: .5s;
-  cursor: pointer;
 }
 
-.contact .social-media .instagram:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  color: black;
+.contact .about-me .social-media ul li:nth-child(1) a:hover .fab {
+  color: #3b5998;
 }
 
-.contact .email-phone {
-  margin: 3%;
+.contact .about-me .social-media ul li:nth-child(2) a:hover .fab {
+  color: #00aced;
 }
 
-.contact .email-phone .email {
-  padding: 2%;
+.contact .about-me .social-media ul li:nth-child(3) a:hover .fab {
+  color: #dd4b39;
 }
 
-@media (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
-  .contact {
-    padding: 5%;
-  }
-  .contact .about-me h1 {
-    font-size: 100px;
-  }
-  .contact .about-me .wrapper {
-    display: block;
-  }
-  .contact .about-me .wrapper .wrap-left {
-    min-width: 700px;
-    font-size: 40px;
-  }
-  .contact .about-me .wrapper .wrap-right {
-    display: none;
-  }
-  .contact .contact-message p {
-    font-size: 1.6em;
-  }
-  .contact .email-phone,
-  .contact .social-media {
-    font-size: 1.6em;
-  }
-  .contact .email-phone .facebook,
-  .contact .email-phone .instagram,
-  .contact .social-media .facebook,
-  .contact .social-media .instagram {
-    font-size: 1.8em;
-    margin: 15px;
-  }
+.contact .about-me .social-media ul li:nth-child(4) a:hover .fab {
+  color: #007bb6;
 }
 
-@media (max-width: 1550px) {
-  .contact .about-me .wrapper .wrap-left {
-    margin-left: 8%;
-  }
-  .contact .about-me .wrapper .wrap-right {
-    margin-right: 8%;
-  }
-}
-
-@media (max-width: 1250px) {
-  .contact .about-me .wrapper .wrap-right {
-    margin-top: 4%;
-  }
-}
-
-@media (max-width: 900px) {
-  .contact .about-me {
-    text-align: center;
-  }
-  .contact .about-me .wrapper {
-    display: block;
-  }
-  .contact .about-me .wrapper .wrap-left {
-    margin: 0 auto;
-    min-width: 70%;
-    margin-bottom: 5%;
-  }
-  .contact .about-me .wrapper .wrap-right {
-    margin-left: 29%;
-  }
-}
-
-@media (max-width: 1050px) {
-  .contact .about-me h1 {
-    margin: 0 !important;
-    text-align: center !important;
-  }
+.contact .about-me .social-media ul li:nth-child(5) a:hover .fab {
+  color: #e4405f;
 }
 /*# sourceMappingURL=style.css.map */

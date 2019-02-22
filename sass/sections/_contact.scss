@@ -1,167 +1,81 @@
 .contact {
-    background-color: #ccf6e7;
+    margin: 0 auto;
+    max-width: 1220px;
+    text-align: center;
+    background-color: #dedede;
     color: #302d2d;
-    padding: 5% 0;
-
-    .about-me {
-        h1 {
-            margin-bottom: 3%;
-            margin-left: 32%;
+    padding: 0 5%;
+    .about-me{
+        h1{
+            color: #75b29c;
+            padding-bottom: 4%;
         }
-        .wrapper{
-            display: flex;
-            justify-content: space-between;
-            .wrap-left{
-                margin: 5% 0 0% 15%;
-                max-width: 40%;
-                text-align: center;
-            }
-            .wrap-right{
-                margin: 0% 15% 0% 0;
-                .fb-page{
-                    width: 400px !important;
-                }
+        .about-me-paragraph{
+            p{
+                
             }
         }
-    }
-
-    .social-media {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 3%;
-
-        .facebook,
-        .instagram {
-            text-decoration: none;
-            color: #302d2d;
-        }
-
-        .facebook {
-            font-size: 30px;
-            margin-right: 1%;
-            transition: .5s;
-            cursor: pointer;
-
-            &:hover {
-                transform: scale(1.1);
-                color: black;
-            }
-        }
-
-        .instagram {
-            margin-left: 1%;
-            font-size: 30px;
-            transition: .5s;
-            cursor: pointer;
-
-            &:hover {
-                transform: scale(1.1);
-                color: black;
-            }
-        }
-    }
-
-    .email-phone {
-        margin: 3%;
-
-        .email {
-            padding: 2%;
-        }
-    }
-}
-
-@include breakpoint (mobileonly) {
-    .contact {
-        padding: 5%;
-        .about-me {
-            h1 {
-                font-size: 100px;
-            }
-            .wrapper{
-                display: block;
-                .wrap-left{
-                    min-width: 700px;
-                    font-size: 40px;
-                }
-                .wrap-right{
-                    display: none;
-                }
-            }
-        }
-
-        .contact-message {
-            p {
-                font-size: 1.6em;
-            }
-        }
-
-        .email-phone,
-        .social-media {
-            font-size: 1.6em;
-
-            .facebook,
-            .instagram {
-                font-size: 1.8em;
-                margin: 15px;
-            }
-        }
-    }
-}
-
-@include breakpoint (desktop) {
-    .contact{
-        .about-me{
-            .wrapper{
-                .wrap-left{
-                    margin-left: 8%;
-                }
-                .wrap-right{
-                    margin-right: 8%;
-                }
-            }
-        }
-    }
-}
-
-@include breakpoint (laptop) {
-    .contact{
-        .about-me{
-            .wrapper{
-                .wrap-right{
-                    margin-top: 4%;
-                }
-            }
-        }
-    }
-}
-
-
-@include breakpoint (phablet) {
-    .contact{
-        .about-me{
-            text-align: center;
-            .wrapper{
-                display: block;
-                .wrap-left{
-                    margin: 0 auto;
-                    min-width: 70%;
-                    margin-bottom: 5%;
-                }
-                .wrap-right{
-                    margin-left: 29%;
-                }
-            }
-        }
-    }
-}
-
-@include breakpoint (tablet) {
-    .contact{
-        .about-me{
-            h1{
-                margin: 0 !important;
-                text-align: center !important;
-            }
+        .social-media{
+              ul {
+                padding: 2% 0;
+                display:flex;
+                justify-content: center;
+              }
+              
+              ul li {
+                list-style: none;
+              }
+              
+              ul li a {
+                width:60px;
+                height:60px;
+                display:block;
+                text-align:center;
+                margin:0 10px;
+                border-radius: 50%;
+                padding: 6px;
+                box-sizing: border-box;
+                text-decoration:none;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+                background: linear-gradient(0deg, #ddd, #fff);
+                transition: .5s;
+              }
+              
+              ul li a:hover {
+                box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+              }
+              
+              ul li a .fab {
+                width: 100%;
+                height:100%;
+                display:block;
+                background: linear-gradient(0deg, #fff, #ddd);
+                border-radius: 50%;
+                line-height: calc(60px - 12px);
+                font-size:24px;
+                color: #262626;
+                transition: .5s;
+              }
+              
+              ul li:nth-child(1) a:hover .fab {
+                color: #3b5998;
+              }
+              
+              ul li:nth-child(2) a:hover .fab {
+                color: #00aced;
+              }
+              
+              ul li:nth-child(3) a:hover .fab {
+                color: #dd4b39;
+              }
+              
+              ul li:nth-child(4) a:hover .fab {
+                color: #007bb6;
+              }
+              
+              ul li:nth-child(5) a:hover .fab {
+                color: #e4405f;
+              }
         }
     }
 }

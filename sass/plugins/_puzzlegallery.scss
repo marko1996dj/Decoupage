@@ -7,7 +7,7 @@ $transTime: 0.5s;
 $border-radius: 5px;
 $shadow-size: 10px;
 $demo-bg: linear-gradient(60deg, #5B5893, darken(#6A66A6, 30%));
-$gallery-bg: #eee;
+$gallery-bg: #dedede;
 
 *,
 *:before,
@@ -18,13 +18,16 @@ $gallery-bg: #eee;
 }
 
 .demo {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 0 auto;
   display: flex;
-  width: 100vw;
+  max-width: 1220px;
   height: 100vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: white;
+  background: #dedede;
 
   &__gallery {
     width: $cols * $partSize + 2 * $cols * $margins + 2 * $margins;
@@ -117,7 +120,7 @@ $gallery-bg: #eee;
     margin-bottom: 37px;
     font-size: 30px;
 
-    color: #302d2d;
+    color: #75b29c;
     font-weight: bold;
 
     & a {
