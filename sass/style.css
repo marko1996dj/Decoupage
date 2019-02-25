@@ -535,7 +535,11 @@ body {
 
 @media (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
   .main {
-    background-size: contain;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.9))), url(../images/background/bg-mobile.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url(../images/background/bg-mobile.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
   .main .home .welcome {
     padding-top: 50% !important;
