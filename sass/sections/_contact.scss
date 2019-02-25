@@ -1,14 +1,16 @@
 .contact {
     margin: 0 auto;
+
     max-width: 1220px;
     text-align: center;
     background-color: #dedede;
     color: #302d2d;
-    padding: 0 5%;
+    padding: 0 5% 2% 5%;
     .about-me{
         h1{
             color: #75b29c;
             padding-bottom: 4%;
+            font-size: 40px;
         }
         .about-me-paragraph{
             p{
@@ -78,4 +80,25 @@
               }
         }
     }
+}
+
+@include breakpoint ( mobileonly ) {
+  .contact{
+    .about-me{
+      h1{
+        font-size: 100px;
+      }
+    }
+  }
+}
+
+
+@include breakpoint ( phablet ) {
+  .contact{
+    .about-me{
+      h1{
+        font-size: 40px;
+      }
+    }
+  }
 }
