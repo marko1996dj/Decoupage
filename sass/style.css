@@ -535,7 +535,7 @@ body {
 
 @media (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
   .main {
-    background-size: cover;
+    background-size: contain;
   }
   .main .home .welcome {
     padding-top: 50% !important;

@@ -58,7 +58,7 @@ body{
 
 @include breakpoint (mobileonly) {
     .main {
-        background-size: cover;
+        background-size: contain;
 
         .home {
             .welcome {
