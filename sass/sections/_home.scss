@@ -7,9 +7,9 @@ body{
 .main {
     text-align: center;
     color: #dedede;
-    height: 100%;
+    min-height: 100%;
     .home {
-        height: 100%;
+        min-height: 100%;
         .welcome {
             padding-top: 15%;
             font-size: 170px;

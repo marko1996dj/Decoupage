@@ -1,6 +1,5 @@
 .contact {
     margin: 0 auto;
-
     max-width: 1220px;
     text-align: center;
     background-color: #dedede;
@@ -11,6 +10,14 @@
             color: #75b29c;
             padding-bottom: 4%;
             font-size: 40px;
+        }
+        .about-me-paragraph{
+          font-size: 25px;
+          margin-bottom: 3%;
+        }
+        .contact-message{
+          font-size: 25px;
+          margin-top: 3%;
         }
         .social-media{
               ul {
@@ -81,7 +88,17 @@
   .contact{
     .about-me{
       h1{
+        margin: -1% 0;
         font-size: 100px;
+        padding: 10% 0;
+      }
+      .about-me-paragraph{
+        font-size: 2em;
+        margin-bottom: 10%;
+      }
+      .contact-message{
+        font-size: 2em;
+        margin: 10% 0;
       }
       .social-media{
         ul {

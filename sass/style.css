@@ -479,11 +479,11 @@ body {
 .main {
   text-align: center;
   color: #dedede;
-  height: 100%;
+  min-height: 100%;
 }
 
 .main .home {
-  height: 100%;
+  min-height: 100%;
 }
 
 .main .home .welcome {
@@ -637,9 +637,9 @@ body {
   .gallery .my-work h1 {
     display: block;
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
     padding: 4% 0;
-    color: #302d2d;
+    color: #75b29c;
   }
   .gallery .lightbox-mobile-only {
     display: -webkit-box;
@@ -673,6 +673,16 @@ body {
   color: #75b29c;
   padding-bottom: 4%;
   font-size: 40px;
+}
+
+.contact .about-me .about-me-paragraph {
+  font-size: 25px;
+  margin-bottom: 3%;
+}
+
+.contact .about-me .contact-message {
+  font-size: 25px;
+  margin-top: 3%;
 }
 
 .contact .about-me .social-media ul {
@@ -749,7 +759,17 @@ body {
 
 @media (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5em) and (min-resolution: 192dpi) {
   .contact .about-me h1 {
+    margin: -1% 0;
     font-size: 100px;
+    padding: 10% 0;
+  }
+  .contact .about-me .about-me-paragraph {
+    font-size: 2em;
+    margin-bottom: 10%;
+  }
+  .contact .about-me .contact-message {
+    font-size: 2em;
+    margin: 10% 0;
   }
   .contact .about-me .social-media ul {
     padding: 2% 0;
